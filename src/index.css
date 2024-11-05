@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.App {
+  background-color: #F0F0F0;
+  padding: 2rem;
+  /* height: 100vh; */
+}
+
+
+.brand-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-title-top {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 0;
+  font-family:'Inter'
+}
+
+.header-title-bottom {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.search-box-container {
+  position: relative;
+}
+
+.search-box {
+  height: 40px;
+  background-color: #f3f3f4;
+  border: 1px solid #F0F0F0;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.search-box::placeholder {
+  color: #A0A0A0
+}
+
+.search-box:focus {
+  border: none;
+  outline: none
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.filters {
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  background-color: #ffffff;
+  /* height: auto; */
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.filter-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+
+.filter-select {
+  width: 12rem;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #CED4DA;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545454;
+  padding-left: 25px;
+}
+
+.filter-icon {
+  position: absolute;
+  left: 10px;
+}
+
+
+.table-container {
+  height: 30rem;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.table {
+  /* margin-top: 1rem; */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  position: sticky;
+  top: -8px;
+  background-color: white;
+  z-index: 10;
+}
+
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  /* border: 1px solid #ddd; */
+}
+
+.table th {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7E7E7E;
+}
+
+.table-checkbox {
+  height: 16px;
+  width: 16px;
+  border: 1px solid #CED4DA;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+
+.name-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.name-status {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+
+}
+
+.name-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #545454;
+}
+
+.name-bottom {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7e7e7e;
+  margin-left: 1.2rem;
+}
+
+.health{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.health-cloud,.health-device{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.health-text{
+  font-size: 10px;
+  font-weight: 500;
+  color:#343434
+}
+
+.location,
+.recorder,
+.tasks {
+  font-size: 14px;
+  font-weight: 400;
+  color: #545454;
+}
+
+.status,.delete-row {
+  width: 53px;
+  height: 23px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-text ,.delete-row-text{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.action {
+  position: relative;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.table-pagination{
+  height:2.5rem;
+  width:100%;
+  background-color:white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1rem
+}
+
+.rows-per-page-option{
+  border:none;
+  font-size: 12px;
+  font-weight: 400;
+  color: #545454;
+  cursor: pointer;
+}
+
+.pagination-controls{
+  margin-left:0.5rem;
+  display: flex;
+  gap:0.5rem;
+  cursor: pointer;
+}
+
+.row-range-text{
+  font-size: 12px;
+  font-weight: 400;
+  color: #545454;
+}
+
+.no-data-found{
+  display:flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%; 
+}
+
+.reset-button{
+  background-color: #F0F0F0;
+  color: #545454;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.reset-button:hover{
+  background-color: lightgrey;
+}
+
+@media (max-width:600px) {
+  .filters {
+    gap: 1rem
+  }
+
+  .filter-container{
+    width: 100%;
+  }
+
+  .filter-select{
+    width: 100%;
+  }
+}
